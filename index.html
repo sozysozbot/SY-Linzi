@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fonts</title>
+    <style>
+        @font-face {
+            font-family: 'LinZi';
+            src: url('LinZi-1.woff') format('woff');
+        }
+        :lang(x-linzklar) {
+            font-family: 'LinZi';
+        }
+    </style>
+</head>
+<body>
+    <details style="margin: 30px auto;" open>
+        <summary style="font-family: 'Yu Gothic UI';"><b>書体見本</b></summary>
+        <p lang="x-linzklar"><span style="font-size: 12px;">我目汝即地天生色光満官民善受耳</span></p>
+        <p lang="x-linzklar"><span style="font-size: 16px;">我目汝即地天生色光満官民善受耳</span></p>
+        <p lang="x-linzklar"><span style="font-size: 20px;">我目汝即地天生色光満官民善受耳</span></p>
+        <p lang="x-linzklar"><span style="font-size: 28px;">我目汝即地天生色光満官民善受耳</span></p>
+        <p lang="x-linzklar"><span style="font-size: 32px;">我目汝即地天生色光満官民善受耳</span></p>
+        <p lang="x-linzklar"><span style="font-size: 40px;">我目汝即地天生色光満官民善受耳</span></p>
+        <p lang="x-linzklar"><span style="font-size: 48px;">我目汝即地天生色光満官民善受耳</span></p>
+    </details>
+    <div>
+        <div>
+            <label for="input">webフォントで好きな文章を試すことができます</label>
+            <input id="input" type="text" placeholder="我目汝即地天生色光満官民善受耳" maxlength="50" style="font-size: 32px; width: 80%;" >
+        </div>
+        <div>
+            <p id="output" lang="x-linzklar" style="font-size: 32px; min-height: 1em;">我目汝即地天生色光満官民善受耳</p>
+        </div>
+        <script>
+            const input = document.getElementById("input");
+            const output = document.getElementById("output"); 
+            input.addEventListener("input", (e) => output.innerHTML = input.value);
+        </script>
+    </div>
+</body>
+</html>
