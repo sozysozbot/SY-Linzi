@@ -27,6 +27,7 @@ const text = `<!DOCTYPE html>
     </style>
 </head>
 <body>
+${codepoints.filter(str => str.toLowerCase() !== "ffff").length} glyphs.
 <ul>
 ${codepoints.filter(str => str.toLowerCase() !== "ffff")
         .map(hex_str => `<li>&#x${hex_str}; <span lang="x-linzklar">&#x${hex_str};</span></li>`).join("\n")
